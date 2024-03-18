@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+    <div>
+        <input type="number" id="ipt1">
+        <br>
+        <input type="number" id="ipt2">
+        <p>Resultado:</p>
+        <p id="resultado">valor</p>
+    </div>
+    <div>
+        <button onclick="calcular('somar')">somar</button>
+        <button onclick="calcular('subtrair')">subtrair</button>
+        <button onclick="calcular('dividir')">dividir</button>
+        <button onclick="calcular('multiplicar')">multiplicar</button>
+    </div>
+    
+
+    <script>
+      
+        function calcular(parametro) {
+            console.log(parametro == "somar")
+            if (parametro == "somar") {
+                res = Number(ipt1.value) + Number(ipt2.value)
+                resultado.innerHTML +=  "<br>" + res
+                
+            }
+            if (parametro == "subtrair") {
+                res = Number(ipt1.value) - Number(ipt2.value)
+                resultado.innerHTML += res
+            }
+            if (parametro == "dividir") {
+                res = Number(ipt1.value) / Number(ipt2.value)
+                resultado.innerHTML += res
+            }
+            if (parametro == "multiplicar") {
+                res = Number(ipt1.value) * Number(ipt2.value)
+                resultado.innerHTML += res
+            }
+            
+            
+        }
+
+    </script>
+
+</body>
+
+</html>

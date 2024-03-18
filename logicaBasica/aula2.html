@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <span>Decidir</span>  
+ <input type="text" id="ipt1"> 
+ <input type="text" id="ipt2">
+ <br>
+ <button onclick="decidir()">decidir</button>
+ <br><br>
+ <span>Resposta:</span>
+ <span id="resposta"></span>
+ <br><br>
+ <span>Validacao</span>
+ <input type="text" id="ipt3">
+ <br>
+ <button onclick="validacao()" value="somar" id="btn1">validacao</button>
+ <br><br>
+ <span id="resposta2"></span>
+</body>
+</html>
+<script>
+    function decidir(){
+       //operadores logicos
+       // > maior que
+       // < menor que
+       // >= maior ou igual
+       // <= menor ou igual
+       // == igual
+       // != diferente
+
+       var valor1 = Number(ipt1.value)
+       var valor2 = Number(ipt2.value)
+       var res = "FALSO"
+       //estrutura de decisao
+        if(valor1 > valor2){
+            res = "VERDADEIRO"
+        }
+
+        resposta.innerHTML = res
+        
+    }
+    function portasLogicas(){
+        //&& - e/and
+        //|| - ou/or
+        //! - não/not - negação
+
+        if(1 == 1 && 2==2){
+            //Ambas as condições são verdade
+        }
+
+        if(1 == 1 || 1 == 2){
+            //Só precisa que uma das condições seja verdade
+        }
+
+        if(!(1 == 1)){
+            //Nega a decisção, inverte de true para false e vice versa
+        }
+    }
+    function validacao(){
+        var valor = btn1.value
+
+        if(valor == "somar"){
+            resposta2.innerHTML = "somar"
+        }
+    }
+</script>

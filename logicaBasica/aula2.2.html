@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Exercício do 50</h1>
+    <input type="number" id="ipt1">
+    <button onclick="verificar()" id="bttn1">Verificar</button>
+    <div>
+        <p>Maior que 50:</p>
+        <p id="ma50"></p>
+    </div>
+    <br>
+    <div>
+        <p>Menor que 50</p>
+        <p id="mn50"></p>
+    </div>
+    <script>
+        function verificar() {
+            var valor1 = Number(ipt1.value)
+            if (valor1 > 50) {
+                ma50.innerHTML += "<br>" + valor1
+            }
+            if (valor1 < 50) {
+                mn50.innerHTML += "<br>" + valor1
+
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

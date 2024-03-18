@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="olaConsole()">
+    <h1>Eu sou um titulo</h1>
+    <p>Eu sou paragrafo!</p>
+    <span>Sou um texto sem estilização</span>
+    <div>
+        <span id="p2">Estou dentro de uma div, div separa conteudos</span>
+    </div>
+    <div>
+        <span>Estou dentro de uma div, div separa conteudos</span>
+    </div>
+    <a href="aula1.1.html">Sou uma ancora para navegação</a>
+    <br>
+    <button style="width: 200px;" onclick="mudarText()">Sou um botão</button>
+    <br>
+    <span>Aqui embaixo um input, inputs servem para adicionar conteudo</span>
+    <input type="text" id="p1">
+    <br><br><br>
+    <button onclick="somar()">somar</button>
+</body>
+</html>
+<script>
+    function olaConsole() {
+        console.log("ola console")
+    }
+    function mudarText(){
+        //Definindo a variavel como uma parte do corpo do html pelo id
+        var textModificado = document.getElementById("p2")
+        //Pegando o valor do campo identificado pela input
+        var text2 = document.getElementById("p1").value
+        //innerHTML -> altera o conteudo do corpo do html
+        textModificado.innerHTML = text2
+    }
+    //operadores numericos (+ = somar, - = subtrair, / = dividir, * = multiplicar)
+    function somar() {
+        var um = 1
+        var dois = 2
+        console.log(um + dois)
+    }
+</script>
